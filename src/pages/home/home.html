@@ -1,14 +1,24 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Cars Example
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+ 
+  <ion-card
+    tappable
+    *ngFor="let car of _car_manager.cars;"
+  >
+    <ion-card-content>
+      <ion-card-title>
+        Car {{car.id}}: Color {{ car.color }}
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+
+
 </ion-content>
+
